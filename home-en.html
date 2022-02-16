@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Oliveira Véras">
+    <link rel="shotcut icon" href="https://4.bp.blogspot.com/-A13CC3DGVGI/VXBmsPmC0cI/AAAAAAAAXgU/O6Poj8C_Q9c/s1600/iconform.png" type="image/x-icon">
+    <title>Home</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .lista{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: 0;
+            background-color: rgb(53, 49, 49);
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        .bar{
+            display: inline;
+        }
+        li a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover{
+            background-color: rgb(24, 23, 23);
+        }
+        main {
+            background-image: url(https://tm.ibxk.com.br/2021/10/25/25025439320000.jpg?ims=1120x420);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-clip: border-box;
+            height: 500px;
+        }
+        .center{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .myimage{
+            width: 200px;
+            height: 200px;
+            margin-top: 100px;
+            margin-bottom: 20px;
+            border-radius: 100%;
+            border: 4px solid white;
+        }
+        .titulo{
+            color: white;
+        }
+        .white{
+            color: white;
+            margin-top: 5px;
+        }
+        .email{
+            margin-top: 5px;
+            font-size: 14px;
+            text-decoration: none;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .email:hover{
+            color: rgb(207, 207, 207);
+        }
+        .botoes{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .github{
+            width: 20px;
+        }
+        .b1{
+            background-color: white;
+            padding: 4px 8px;
+            border-radius: 5px;
+            box-shadow: 2px 2px rgba(0, 0, 0, 0.418);
+        }
+        .b1:hover{
+            background-color: rgb(209, 209, 209);
+        }
+        .b2{
+            margin-right: 10px;
+        }
+        .section1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 500px;
+        }
+        h2{
+            margin-top: 40px;
+            font-size: 19px;
+            margin-bottom: 90px;
+        }
+        .bloco{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 970px;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logos{
+            width: 70px;
+        }
+        .descricao{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 300px;
+            margin-top: 15px;
+        }
+        .desc{
+            width: 100%;
+        }
+        footer{
+            text-align: center;
+        }
+        .fim{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            font-style: italic;
+        }
+        .lista{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; 
+        }
+        .idioma{
+            border-radius: 10px;
+            padding: 2px 5px 5px 5px;
+            margin-top: 6px;
+            margin-right: 8px;
+        }
+        article{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        aside{
+            width: 50%;
+            text-align: center;
+            font-size: 25px;
+            height: 300px;
+            padding: 20px;
+        }
+        .contatos{
+            background-color: #282830;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .sobre{
+            background-color: #3E4651;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h6{
+            color: white;
+            margin-bottom: 20px;
+        }
+        .contato{
+            background-color: white;
+            font-size: 18px;
+            text-decoration: none;
+            padding: 10px;
+            color: black;
+            border-radius: 20px;
+            box-shadow: 2px 2px black;
+            margin-bottom: 10px;
+        }
+        .contato:hover{
+            background-color: rgb(173, 173, 173);
+        }
+        .img-contato{
+            width: 20px;
+            transform: translateY(3px);
+            margin-right: 5px;
+        }
+        .info{
+            width: 50%;
+        }
+        .info-linha{
+            color: white;
+            font-size: 15px;
+            margin-bottom: 10px;
+            text-align: left;
+            list-style: none;
+            font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 50px;
+        }
+        .section2{
+            padding: 0px 50px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title-sobre{
+            margin-bottom: 30px;   
+        }
+        @media screen and (max-width: 1325px){
+            main{
+                background-attachment: fixed;  
+                background-size: cover;
+            }
+            body{
+                font-size: 14px;
+            }
+            .info-linha{
+                font-size: 14px;
+                text-align: center;
+                margin-left: 0;
+            }
+            .info{
+                width: 100%;
+                margin-left: 0;
+                margin-right: 50px;
+            }
+            #inicio{
+                font-size: 16px;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+        }
+        @media screen and (max-width: 1300px){
+            .bloco{
+                flex-direction: column;
+                width: 100%;
+            }
+            #contatos{
+                flex-direction: column;
+                margin-top: 200px;
+                
+            }
+            .contatos{
+                width: 100%;
+            }
+            .sobre{
+                width: 100%;
+            }
+            .box{
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="lista">
+            <div class="item1">
+                <li style="display: inline-block;" class="bar"><a href="#inicio">Start</a></li>
+                <li style="display: inline-block;" class="bar"><a href="#contatos">Contacts</a></li>
+                <li style="display: inline-block;" class="bar"><a href="#sobre-mim">About me</a></li>
+            </div>
+            <div class="item2">
+                <li style="right: 0;" class="bar"><a href="home-pt.html" class="idioma">Language: <img src="https://www.emojimeaning.com/img/img-apple-160/1f1fa-1f1f8.png" alt=" " width="20px" style="transform: translateY(5px);"></a></li>
+            </div>
+        </ul>
+    </nav>
+    <main>
+        <div class="center">
+            <img src="Foto do site - quadrado.jpeg" alt="" class="myimage">
+            <h1 class="titulo">Lucas Oliveira Véras</h1>
+            <p class="white">Student and future dev front end</p>
+            <p class="white">Natal, RN, Brazil</p>
+            <a href="mailto:verasluca00@gmail.com " class="email">verasluca00@gmail.com</a>
+            <div class="botoes">
+                <a href="https://www.linkedin.com/in/lucas-oliveira-v%C3%A9ras-41825821a/" class="b1 b2"><img src="https://cdn-icons-png.flaticon.com/512/25/25320.png" alt="github" class="github"></a>
+                <a href="https://github.com/Lucas-Veras" class="b1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/480px-Octicons-mark-github.svg.png" alt="github" class="github"></a>
+            </div>
+        </div>
+    </main>
+    <section class="section1">
+        <h2 id="inicio">Student and improving in web application development</h2>
+        <div class="bloco">
+            <div class="box">
+                <img src="https://img.icons8.com/ios-glyphs/344/html-5.png" alt="" class="logos">
+                <h5>Web development</h5>
+                <div class="descricao">
+                    <p class="desc" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                        Graduating TADS (Technology in Systems Analysis and Development) by 
+                        IFRN (2021). And I have experience with web development: HTML, CSS, 
+                        Javascript, SEO.</p>
+                </div>   
+            </div>
+            <div class="box">
+                <img src="https://icon-library.com/images/react-icon/react-icon-29.jpg" alt="" class="logos" style="width: 60px;">
+                <h5>React</h5>
+                <div class="descricao">
+                    <p class="desc" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                        I started studying React along with TypeScript recently. And it's a 
+                        JavaScript library focused on creating user interfaces on web pages. 
+                        In time I will get practice on it.</p>
+                </div>  
+            </div>
+            <div class="box">
+                <img src="http://cdn.onlinewebfonts.com/svg/img_501919.png" alt="" class="logos">
+                <h5>Other Languages</h5>
+                <div class="descricao">
+                    <p class="desc" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                        In addition to all of these, I've had contact with other programming 
+                        languages. Among them are Python, C, C# and Assembly.</p>
+                </div>  
+            </div>
+        </div>
+    </section>
+    <article id="contatos">
+        <aside class="contatos">
+            <h6>Contacts</h6>
+            <a href="https://www.instagram.com/lucax_olvs/" class="contato"><img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt="" class="img-contato">My Instagram</a>
+            <a href="mailto:verasluca00@gmail.com" class="contato" ><img src="https://www.caceres.mt.leg.br/banco-de-imagens/email.png/image" alt="" class="img-contato">My Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="https://www.linkedin.com/in/lucas-oliveira-v%C3%A9ras-41825821a/" class="contato" ><img src="https://cdn-icons-png.flaticon.com/512/25/25320.png" alt="" class="img-contato">My Linkedin&nbsp;&nbsp;</a>
+            <a href="https://github.com/Lucas-Veras" class="contato" ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/480px-Octicons-mark-github.svg.png" alt="" class="img-contato">My Git Hub&nbsp;&nbsp;&nbsp;</a>
+        </aside>
+        <aside class="sobre">
+            <h6>Information</h6>
+            <ul class="info" style="margin-left: 50px;">
+                <li class="info-linha">Full name: Lucas Oliveira Véras</li>
+                <li class="info-linha">Age: 18 years</li>
+                <li class="info-linha">Nationality: São Paulo - SP - Brazil</li>
+                <li class="info-linha">Current City: Natal - RN - Brazil</li>
+                <li class="info-linha">Languages: Advanced Portuguese and English</li>
+                <li class="info-linha">School level: High school</li>
+                <li class="info-linha">Now: Graduating TADS at IFRN</li>
+                <li class="info-linha">Focus: Web development</li>
+            </ul>
+        </aside>
+    </article>
+    <section class="section2" id="sobre-mim">
+        <h2 class="title-sobre">About me</h2>
+        <p style="text-indent: 30px;font-family: Georgia, 'Times New Roman', Times, serif;"><em>
+            "Hi, I'm Lucas, I'm 18 years old and I was born in the capital of São Paulo. As I said, I'm from 
+            São Paulo but I haven't lived there all this time, also I've lived in other places like Cotia-SP, 
+            Camaçari-BA, Nova Friburgo-RJ, Parnaíba-PI and now I'm in Natal-RN. Therewith, I learned several 
+            things from people close to me and from the situations I went through, as I always had to adapt 
+            to circumstances and in this I discovered that life is made of phases. Some more difficult, others 
+            easier and they were the ones that they made me stronger, they were the ones who showed me which 
+            the people I can count on for everything and so I realized that in the end what matters is that 
+            you never give up, have the right people by your side and always continue your journey with smile 
+            on face. Coming back to me, I continue on my journey of becoming a web developer and one day I 
+            know I will become one. I know this, Dattebayo! :)"</em></p>
+    </section>
+    <footer>
+        <hr>    
+        <p class="fim">&copy;Website created in 2021 // Created by Lucas Oliveira</p>
+    </footer>
+</body>
+</html>
